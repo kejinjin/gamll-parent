@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>gmall-parent</artifactId>
+        <groupId>com.atguigu.gmall</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>model</artifactId>
+    <description>系统业务中的所有JavaBean（数据模型固定，接受和封装数据）、
+        do（database ）、to（transfer）、vo（value/view）、po（持久化）、pojo（普通java对象）、bo（business）
+    </description>
+
+<!--    多封装O。同一种数据模型不要超过三个o（vo，do，to） -->
+<!--    DDD： Controller、Service（order、user）、Dao、JavaBean【do、to、vo】-->
+<!--    【用户】登录：同样的模型的某个保证一份
+    UserDo {
+      //和数据库对应完整10个字段。 username，password
+    }
+
+    //不能全数把数据库所有字段交给前端
+    UserVo { username,email,last_login } , 前端只能收到三个值
+
+
+    //业务传输用
+    UserTo {username,id,phone}，传给其他业务
+
+    公司：UserDo【注意脱敏工作】
+
+    do：  Data Object： JavaBean 拥有属性
+    dao： Database Access Object： 访问数据库对象（CRUD）。
+    dao封装了crud，crud的数据由do封装接受
+-->
+<!--    Map hello(Map map) -->
+<!--    UserMsg hello(LoginVo vo)-->
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!--mybatis-plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <scope>provided </scope>
+        </dependency>
+
+        <!--swagger-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>

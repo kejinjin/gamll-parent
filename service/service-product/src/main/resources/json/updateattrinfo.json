@@ -1,0 +1,25 @@
+{
+  "id": 12,
+  "attrName": "出版社444",
+  "category1Id": 0,
+  "category2Id": 0,
+  "category3Id": 0,
+  "attrValueList": [
+    {
+      "id": 59,
+      "valueName": "张三666",
+      "attrId": 12,
+      "edit": false
+    },
+    {
+      "valueName": "王五哈哈",
+      "edit": false
+    },
+    {
+      "valueName": "赵六呵呵",
+      "edit": false
+    }
+  ],
+  "categoryId": 1,
+  "categoryLevel": 1
+}
